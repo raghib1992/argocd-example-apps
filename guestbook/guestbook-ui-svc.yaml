@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: guestbook-ui
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 31231
   selector:
     app: guestbook-ui
